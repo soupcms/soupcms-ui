@@ -1,0 +1,38 @@
+@import "common/stylesheets/soupcms-variables";
+@import "bootstrap/variables";
+
+.page-title {
+  margin-bottom: 20px;
+  background-color: $gray-lighter;
+  max-height: 200px;
+  overflow: hidden;
+
+  .image {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .overlay {
+      position: absolute;
+      top: 25px;
+      padding: 0px 50px 10px 20px;
+    }
+  }
+
+  .overlay {
+    padding: 10px 50px 20px 0px;
+  }
+
+  .light-on-dark {
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+
+  .dark-on-light {
+    background-color: rgba(33, 37, 48, 0.5);
+    color: #ffffff;
+  }
+
+  .none {
+  }
+
+}

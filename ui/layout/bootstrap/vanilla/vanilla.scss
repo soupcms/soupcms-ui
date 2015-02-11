@@ -1,0 +1,17 @@
+@import "common/stylesheets/default";
+
+.body-main {
+  .sidebar-container {
+    .sidebar {
+      background-color: $gray-lighter;
+      position: fixed;
+      top: 0px;
+      padding: 50px 20px;
+      height: 100%;
+    }
+  }
+  .module-article-list-view {
+    padding-top: 20px;
+  }
+
+}

@@ -1,0 +1,12 @@
+- articles = data['articles']
+- if articles && !articles.empty?
+  .module-list-view
+    - if module_hash['template']['config'] && module_hash['template']['config']['title']
+      .lead = module_hash['template']['config']['title']
+    ul.list-unstyled
+      - articles.each do |article|
+        li
+          a href="#{article['url']}" = article['title']
+    - if module_hash['template']['config'] && module_hash['template']['config']['all-link']
+      a href="#{module_hash['template']['config']['all-link']['link']['url']}"
+        = module_hash['template']['config']['all-link']['label']

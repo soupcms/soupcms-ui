@@ -1,0 +1,23 @@
+- authors = [data['authors'] || data['author']].flatten
+.module-author
+  - authors.each do |author|
+    .author
+      h2
+        img.img-circle src="#{author['thumbnail']}"
+      .clear-fix
+        .name = author['name']
+        - bio =[author['bio']].flatten
+        - bio.each do |item|
+          .bio = item
+      .toolbar
+        ul.list-inline
+          - if author['twitter_handle']
+            li
+              a.twitter href="http://www.twitter.com/#{author['twitter_handle']}"
+                i class="fa fa-twitter"
+          - if author['github_username']
+            li
+              a.github href="https://www.github.com/#{author['github_username']}"
+                i class="fa fa-github"
+
+

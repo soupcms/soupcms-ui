@@ -1,0 +1,30 @@
+- articles = data['articles']
+- if articles && !articles.empty?
+  .module-article-list-view
+    - articles.each_with_index do |article, index|
+      .article class="#{ (index % 2 == 0) ? 'alt-row' : ''}"
+        h3.article-title
+          a href="#{article['url']}"
+            = article['title']
+        .meta-info
+          span.date.btn-group
+            button.btn.btn-primary.btn-xs
+              i.fa.fa-fw.fa-calendar
+              | &nbsp;#{article.publish_datetime.strftime('%d %b')}
+            button.btn.btn-default.btn-xs = article.publish_datetime.strftime('%Y')
+          span &nbsp; &nbsp; &nbsp; &nbsp;
+          - if article['author_ref']
+            span.author
+              span
+                i.fa.fa-fw.fa-edit
+              span = article['author_ref']['name']
+  
+        hr
+  
+        - if article['hero_image']
+          a.col-md-4 href="#"
+            == rimg image: article['hero_image'], desktop: 'w_240', html_options: { class: 'hero' }
+  
+        p = article['description']
+  
+        a.pull-right.btn.btn-sm.btn-primary href="#{article['url']}" Read More

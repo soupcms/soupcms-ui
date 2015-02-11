@@ -1,0 +1,22 @@
+html lang="en"
+  head
+    = render 'partial/system/layout-head.slim'
+
+  body
+    - if areas['header']
+      .header
+        = areas['header'].html
+    .container
+      .row
+        - if areas['body']
+          .main.col-md-9
+            = areas['body'].html
+
+        - if areas['sidebar']
+          .sidebar.col-md-3
+            = areas['sidebar'].html
+    - if areas['footer']
+      .footer
+        = areas['footer'].html
+
+    = render 'partial/system/include-javascripts.slim'

@@ -1,0 +1,12 @@
+- tags = data['tag-cloud']
+- if tags && !tags.empty?
+  .tag-cloud
+    .lead Tag Cloud
+    .well.well-sm
+      .tags
+        - tags.each do |tag|
+          .btn-group
+            a.tag.btn.btn-default.btn-xs href="#{tag['link']['url']}"
+              = tag['label']
+            a.tag.btn.btn-primary.btn-xs href="#{tag['link']['url']}"
+              = tag['weight']

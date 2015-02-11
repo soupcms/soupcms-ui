@@ -1,0 +1,17 @@
+.module-author {
+  .author {
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+
+    .toolbar {
+      font-size: 3em;
+    }
+    .twitter {
+      color: #00aced;
+    }
+    .github {
+      color: black;
+    }
+  }
+}

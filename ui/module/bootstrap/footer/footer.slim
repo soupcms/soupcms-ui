@@ -1,0 +1,19 @@
+- footer = data['footer']
+- footer = footer[0] if footer.is_a?(Array)
+hr
+.container
+  .row
+    .col-md-6
+      .pull-left = footer['copyright']
+    .col-md-6
+      ul.list-inline.pull-right
+        - if footer['links']
+          - footer['links'].each do |item|
+            li
+              a href="#{item['link']['url']}"
+                - if item['font_icon']
+                  i class="#{item['font_icon']} fa-fw"
+                = "#{item['label']}"
+
+  .row
+    | &nbsp;

@@ -1,0 +1,7 @@
+- item = locals[:item]
+li class="level-#{item['tag']}"
+  a href="#{item['href']}" = item['label']
+  - if !item['children'].empty?
+    ul
+      - item['children'].each do |subitem|
+        == render 'module/bootstrap/table-of-content/nav.slim', { item: subitem }

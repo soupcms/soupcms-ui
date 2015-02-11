@@ -1,0 +1,17 @@
+- overlay = locals[:overlay] || {}
+- if overlay['headline'] || overlay['sub_headline'] || overlay['body_copy']
+  .container
+    .overlay(class="#{overlay['style']}")
+      - if overlay['headline']
+        h1
+          = overlay['headline']
+
+      - if overlay['sub_headline']
+        h3 = overlay['sub_headline']
+
+      - if overlay['body_copy']
+        p = overlay['body_copy']
+
+
+
+

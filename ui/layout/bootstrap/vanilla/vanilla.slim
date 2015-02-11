@@ -1,0 +1,15 @@
+html lang="en"
+  head
+    = render 'partial/system/layout-head.slim'
+  body
+    .body-main.container-fluid
+      - if areas['body']
+        .col-md-9.main-container
+          .main
+            = areas['body'].html
+      - if areas['sidebar']
+        .col-md-3.sidebar-container
+          .sidebar.visible-md.visible-lg
+            = areas['sidebar'].html
+
+    = render 'partial/system/include-javascripts.slim'

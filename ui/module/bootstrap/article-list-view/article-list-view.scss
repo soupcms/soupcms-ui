@@ -1,0 +1,17 @@
+.module-article-list-view {
+  .article {
+    overflow: auto;
+    width: 100%;
+    .article-title {
+      a:hover {
+        text-decoration: none;
+      }
+    }
+    hr {
+      margin: 7px 0;
+    }
+    img {
+      padding: 0 10px 10px 0;
+    }
+  }
+}

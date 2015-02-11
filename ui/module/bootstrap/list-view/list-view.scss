@@ -1,0 +1,18 @@
+@import "common/stylesheets/soupcms-variables";
+@import "bootstrap/variables";
+
+.module-list-view {
+  li {
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    border-left: 4px solid $brand-primary;
+    a:hover {
+      text-decoration: none;
+    }
+    background-color: $gray-lighter;
+  }
+  li:hover {
+    background-color: white;
+  }
+  padding-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+- article = data['article']
+- url = "http:#{article['url']}"
+- text = article['title']
+
+.module-share-this
+  .share-text
+    - if module_hash['template']['config'] && module_hash['template']['config']['title']
+      .lead = module_hash['template']['config']['title']
+
+  .share-buttons
+    /! Facebook
+    a.facebook href="http://www.facebook.com/sharer.php?u=#{url}" target="_blank"
+      i.fa.fa-facebook-square.fa-3x
+
+    /! Twitter
+    a.twitter href="http://twitter.com/share?url=#{url}&text=#{text}" target="_blank"
+      i.fa.fa-twitter-square.fa-3x
+
+    /! Google+
+    a.gplus href="https://plus.google.com/share?url=#{url}" target="_blank"
+      i.fa.fa-google-plus-square.fa-3x
+
+    /! LinkedIn
+    a.linkedin href="http://www.linkedin.com/shareArticle?mini=true&url=#{url}" target="_blank"
+      i.fa.fa-linkedin-square.fa-3x
+
+    /! Email
+    a.email href="mailto:?Subject=#{text}&Body=I%20saw%20this%20and%20thought%20of%20you!%20 #{url}"
+      i.fa.fa-envelope-square.fa-3x

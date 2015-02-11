@@ -1,0 +1,15 @@
+- articles = data['articles']
+- if articles && !articles.empty?
+  .module-article-tile-view
+    - articles.each do |article|
+      .tile.col-md-4
+        .thumbnail
+          .hero-img
+            - if article['hero_image']
+              == rimg image: article['hero_image'], desktop: 'w_340,h_272,c_fill'
+            - else
+              img data-src="holder.js/100%x175/text:#{article['title']}"
+
+          .caption
+            .lead = article['title']
+            a.btn.btn-primary href="#{article['url']}" Read

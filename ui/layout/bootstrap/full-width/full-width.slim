@@ -1,0 +1,16 @@
+html lang="en"
+  head
+    = render 'partial/system/layout-head.slim'
+  body
+    - if areas['header']
+      .header
+        = areas['header'].html
+    - if areas['body']
+      .container
+        .main
+          = areas['body'].html
+    - if areas['footer']
+      .footer
+        = areas['footer'].html
+
+    = render 'partial/system/include-javascripts.slim'
