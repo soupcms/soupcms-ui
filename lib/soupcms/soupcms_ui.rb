@@ -1,0 +1,1 @@
+require 'soupcms/ui/version'
